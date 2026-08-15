@@ -26,8 +26,11 @@ export function FluidCanvas() {
         SPLAT_RADIUS: 0.22,
         SPLAT_FORCE: 6500,
         COLORFUL: false,
-        SPLAT_COLOR: { r: 0, g: 0, b: 0 },
-        TRANSPARENT: true,
+        // Rendered as white dye on black, then inverted in CSS so the page
+        // stays white and the liquid reads as thick black goo.
+        SPLAT_COLOR: { r: 0.8, g: 0.8, b: 0.8 },
+        BACK_COLOR: { r: 0, g: 0, b: 0 },
+        TRANSPARENT: false,
         SHADING: false,
         BLOOM: false,
         SUNRAYS: false,
