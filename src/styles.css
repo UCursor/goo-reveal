@@ -213,6 +213,7 @@
   align-items: center;
   justify-content: center;
   pointer-events: none;
+  mix-blend-mode: difference;
 }
 
 .hero-text {
@@ -222,7 +223,6 @@
   line-height: 0.75;
   letter-spacing: -0.085em;
   color: #fff;
-  mix-blend-mode: difference;
   transform: translateY(-2%);
 }
 
