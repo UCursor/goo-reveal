@@ -23,7 +23,7 @@ export function FluidCanvas() {
         PRESSURE: 0.3,
         PRESSURE_ITERATIONS: 20,
         CURL: 0.5,
-        SPLAT_RADIUS: 0.5,
+        SPLAT_RADIUS: 0.75,
         SPLAT_FORCE: 400,
         COLORFUL: false,
         // Rendered as white dye on black, then inverted in CSS so the page
