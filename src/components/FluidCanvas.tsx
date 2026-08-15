@@ -18,13 +18,13 @@ export function FluidCanvas() {
         TRIGGER: "hover",
         SIM_RESOLUTION: 128,
         DYE_RESOLUTION: 1024,
-        DENSITY_DISSIPATION: 0.97,
-        VELOCITY_DISSIPATION: 0.2,
+        DENSITY_DISSIPATION: 0.94,
+        VELOCITY_DISSIPATION: 0.35,
         PRESSURE: 0.8,
         PRESSURE_ITERATIONS: 20,
         CURL: 25,
-        SPLAT_RADIUS: 0.35,
-        SPLAT_FORCE: 4000,
+        SPLAT_RADIUS: 0.25,
+        SPLAT_FORCE: 2500,
         COLORFUL: false,
         // Rendered as white dye on black, then inverted in CSS so the page
         // stays white and the liquid reads as thick black goo.
