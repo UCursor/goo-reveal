@@ -163,7 +163,7 @@
   height: 100%;
   z-index: 5;
   pointer-events: auto;
-  filter: invert(1);
+  filter: contrast(20) invert(1);
 }
 
 .stage-top {
