@@ -23,8 +23,8 @@ export function FluidCanvas() {
         PRESSURE: 0.3,
         PRESSURE_ITERATIONS: 20,
         CURL: 0,
-        SPLAT_RADIUS: 0.5,
-        SPLAT_FORCE: 800,
+        SPLAT_RADIUS: 0.45,
+        SPLAT_FORCE: 600,
         COLORFUL: false,
         // Rendered as white dye on black, then inverted in CSS so the page
         // stays white and the liquid reads as thick black goo.
