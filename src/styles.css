@@ -163,7 +163,7 @@
   height: 100%;
   z-index: 5;
   pointer-events: auto;
-  filter: contrast(20) invert(1);
+  filter: contrast(20) invert(1) url(#goo-chroma);
 }
 
 .stage-top {
@@ -230,22 +230,11 @@
   letter-spacing: -0.085em;
   color: #fff;
   transform: translateY(-2%);
-  /* chromatic aberration */
-  text-shadow:
-    0.018em 0 rgba(255, 0, 0, 0.55),
-    -0.018em 0 rgba(0, 255, 255, 0.55),
-    0 0.012em rgba(0, 0, 255, 0.35);
 }
 
 @media (max-width: 767px) {
   .intro p {
     display: none;
-  }
-
-  .hero-text {
-    text-shadow:
-      0.012em 0 rgba(255, 0, 0, 0.5),
-      -0.012em 0 rgba(0, 255, 255, 0.5);
   }
 
   .cta {
@@ -282,3 +271,10 @@
 }
 
 html, body { overflow: hidden; }
+
+.svg-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}

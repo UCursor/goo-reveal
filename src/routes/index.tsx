@@ -29,9 +29,38 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="stage">
+      <svg className="svg-defs" aria-hidden="true" focusable="false">
+        <filter id="goo-chroma" colorInterpolationFilters="sRGB">
+          <feColorMatrix
+            in="SourceGraphic"
+            type="matrix"
+            values="1 0 0 0 0  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0"
+            result="cyanish"
+          />
+          <feOffset in="cyanish" dx="-6" dy="-3" result="rShift" />
+          <feColorMatrix
+            in="SourceGraphic"
+            type="matrix"
+            values="0 0 0 0 1  0 1 0 0 0  0 0 0 0 1  0 0 0 1 0"
+            result="magentaish"
+          />
+          <feOffset in="magentaish" dx="5" dy="-4" result="gShift" />
+          <feColorMatrix
+            in="SourceGraphic"
+            type="matrix"
+            values="0 0 0 0 1  0 0 0 0 1  0 0 1 0 0  0 0 0 1 0"
+            result="yellowish"
+          />
+          <feOffset in="yellowish" dx="2" dy="7" result="bShift" />
+          <feBlend in="rShift" in2="gShift" mode="multiply" result="rg" />
+          <feBlend in="rg" in2="bShift" mode="multiply" />
+        </filter>
+      </svg>
+
       <ClientOnly>
         <FluidCanvas />
       </ClientOnly>
+
 
       <header className="stage-top">
         <div className="intro">
