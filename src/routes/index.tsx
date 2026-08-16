@@ -55,7 +55,27 @@ function Index() {
           <feBlend in="rShift" in2="gShift" mode="multiply" result="rg" />
           <feBlend in="rg" in2="bShift" mode="multiply" />
         </filter>
+
+        <filter id="hover-warp" colorInterpolationFilters="sRGB">
+          <feTurbulence
+            id="hover-warp-noise"
+            type="fractalNoise"
+            baseFrequency="0.012"
+            numOctaves="2"
+            seed="7"
+            result="noise"
+          />
+          <feDisplacementMap
+            id="hover-warp-map"
+            in="SourceGraphic"
+            in2="noise"
+            scale="0"
+            xChannelSelector="R"
+            yChannelSelector="G"
+          />
+        </filter>
       </svg>
+
 
       <ClientOnly>
         <FluidCanvas />
