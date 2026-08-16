@@ -217,6 +217,11 @@
   mix-blend-mode: difference;
 }
 
+.hero-3d {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
 .hero-text {
   white-space: nowrap;
   font-size: clamp(90px, 19vw, 360px);
@@ -225,7 +230,29 @@
   letter-spacing: -0.085em;
   color: #fff;
   transform: translateY(-2%);
+  /* chromatic aberration */
+  text-shadow:
+    0.018em 0 rgba(255, 0, 0, 0.55),
+    -0.018em 0 rgba(0, 255, 255, 0.55),
+    0 0.012em rgba(0, 0, 255, 0.35);
 }
+
+@media (max-width: 767px) {
+  .intro p {
+    display: none;
+  }
+
+  .hero-text {
+    text-shadow:
+      0.012em 0 rgba(255, 0, 0, 0.5),
+      -0.012em 0 rgba(0, 255, 255, 0.5);
+  }
+
+  .cta {
+    margin-top: 0;
+  }
+}
+
 
 .stage-footer {
   position: absolute;
