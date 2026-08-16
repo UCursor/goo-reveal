@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export function FluidCanvas() {
   const ref = useRef<HTMLCanvasElement>(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     let cancelled = false;
@@ -16,12 +18,12 @@ export function FluidCanvas() {
       ) => void;
       WebGLFluid(canvas, {
         TRIGGER: "hover",
-        SIM_RESOLUTION: 128,
-        DYE_RESOLUTION: 1024,
-        DENSITY_DISSIPATION: 0.97,
+        SIM_RESOLUTION: isMobile ? 64 : 128,
+        DYE_RESOLUTION: isMobile ? 512 : 1024,
+        DENSITY_DISSIPATION: 0.9,
         VELOCITY_DISSIPATION: 0.85,
         PRESSURE: 0.3,
-        PRESSURE_ITERATIONS: 20,
+        PRESSURE_ITERATIONS: isMobile ? 12 : 20,
         CURL: 0,
         SPLAT_RADIUS: 0.45,
         SPLAT_FORCE: 600,
@@ -42,7 +44,7 @@ export function FluidCanvas() {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [isMobile]);
 
   return <canvas ref={ref} className="fluid-canvas" />;
 }

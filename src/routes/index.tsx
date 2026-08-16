@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ClientOnly } from "@tanstack/react-router";
 import { FluidCanvas } from "@/components/FluidCanvas";
+import { HeroText } from "@/components/HeroText";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -43,8 +45,9 @@ function Index() {
       </header>
 
       <main className="hero">
-        <h1 className="hero-text">NOTHIN&rsquo;</h1>
+        <HeroText />
       </main>
+
 
       <footer className="stage-footer">
         <span>Creative studio in Paris</span>
