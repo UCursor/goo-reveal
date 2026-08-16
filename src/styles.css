@@ -219,6 +219,7 @@
 
 .hero-3d {
   transform-style: preserve-3d;
+  filter: url(#hover-warp);
   will-change: transform;
 }
 
