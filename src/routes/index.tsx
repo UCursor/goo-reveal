@@ -43,8 +43,9 @@ function Index() {
       </header>
 
       <main className="hero">
-        <h1 className="hero-text">NOTHIN&rsquo;</h1>
+        <HeroText />
       </main>
+
 
       <footer className="stage-footer">
         <span>Creative studio in Paris</span>
