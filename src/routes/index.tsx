@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ClientOnly } from "@tanstack/react-router";
 import { FluidCanvas } from "@/components/FluidCanvas";
+import { HeroText } from "@/components/HeroText";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
